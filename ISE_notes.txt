@@ -1,0 +1,39 @@
+security verification for ISE
+Administration > system > Settings > security settings
+uncheck tls 1.0 and 1.1 and other unsafe settings
+
+Patch section
+when you apply patch 3 the system will appear unresponsive and look like it wants to crash please wait at least 30 minutes , ise might restart
+to check patch is applied 
+gear > server information
+
+disable telemetry
+Administration > system > Settings >
+network success diagnostics disable telemetry
+
+might need adjusting
+ISE gui timeout
+Choose Administration > System > Admin Access > Settings > Session > Session Timeout.
+https://www.cisco.com/c/en/us/td/docs/security/ise/2-4/admin_guide/b_ISE_admin_guide_24/m_admin_accesspolicy_settings.html
+
+
+https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst4500/12-2/31sg/configuration/guide/conf/dot1x.html
+
+Licensing details
+https://www.cisco.com/c/en/us/products/collateral/security/identity-services-engine/guide-c07-656177.html#5CiscoISEorderingSKUsandentitlementinformation
+
+
+
+Verify this is needed for tacacs
+from here: https://www.cisco.com/c/en/us/td/docs/security/ise/2-4/admin_guide/b_ISE_admin_guide_24/m_ise_tacacs_device_admin.html
+Create Device Administration Policy Sets
+To create a device administration policy set:
+
+Before you begin
+Ensure that the Device Administration in the Work Centers > Device Administration > Overview > Deployment window is enabled for TACACS+ operations.
+
+Ensure that any User Identity Groups, (for example, System_Admin, Helpdesk) required for the policy are created. ( Work Centers > Device Administration > User Identity Groups page). Ensure that the member users (for example, ABC, XYZ) are allocated to their corresponding groups. ( Work Centers > Device Administration > Identities > Users window).
+
+Ensure to configure TACACS settings on devices that need to be administered. ( Work Centers > Device Administration > Network Resources > Network Devices > Add > TACACS Authentication Settings check box is enabled and the shared secret for TACACS and devices are identical to facilitate the devices to query Cisco ISE.)
+
+Ensure that the Network Device Group, based on the Device Type and Location, is created. ( Work Centers > Device Administration > Network Device Groups window)
